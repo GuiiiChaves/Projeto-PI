@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(imagem/mountains-1412683.png);
+    font-weight: 600;
+    user-select: none;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 70px;
+}
+
+.navbar{
+    list-style: none;
+
+}
+
+.navbar li{
+    display: inline-block;
+    padding: 0 15px;  
+}
+.navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.1px;
+    color: rgb(255, 255, 255);
+}
+.navbar li a:hover{
+    color: aqua;
+}
+.botao{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius:  50px;
+    background-color: black;
+}
+.botao:hover{
+    color: aqua;
+}
+.logo{
+color: rgb(255, 255, 255);
+}
+.texto{ 
+    position: absolute;
+    display: flexbox;
+    bottom: 200px;
+    color: red;
+}
+
+.registro{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius:  50px;
+    background-color: black;
+    position: fixed;
+    left: 10px;
+    bottom: 140px;
+    
+}
