@@ -84,3 +84,7 @@ body{
     transition: 0.3s ease;
 
 }
+
+.duvida:hover{
+    transform: scale(1.2);
+    }
