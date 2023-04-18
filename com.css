@@ -40,7 +40,9 @@ body{
     border: 2px solid #78788c;
     border-radius: 30px;
     background: 0;
-    color: cyan;
+    color: black;
+    background-color: white;
+    font-weight: 300;
     cursor: pointer;
   }
   
