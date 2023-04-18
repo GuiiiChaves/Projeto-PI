@@ -34,7 +34,8 @@ header{
     color: rgb(255, 255, 255);
 }
 .navbar li a:hover{
-    color: aqua;
+    transform: scale(1.2);
+    transition: .5s;
 }
 .botao{
     text-decoration: none;
@@ -47,7 +48,8 @@ header{
     background-color: black;
 }
 .botao:hover{
-    color: aqua;
+    transform: scale(1.2);
+    transition: .5s;
 }
 .logo{
 color: rgb(255, 255, 255);
