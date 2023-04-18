@@ -1,0 +1,12 @@
+body{
+    background-image: url("https://www.designi.com.br/images/preview/10878733.jpg");
+}
+
+h1{
+    position: absolute;
+    right: 34%;
+    top: 10%;
+    font-size: 60px;
+    color: aliceblue;
+    font-style: italic;
+}

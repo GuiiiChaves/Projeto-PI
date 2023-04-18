@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pontos.css">
+    <link rel="stylesheet" href="menu.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+       <div class="cabeca">
+        <h1>CarboPontos</h1>
+       </div> 
+    </section>
+<!--Menu -->
+<input type="checkbox" id="active">
+<label for="active" class="menu-btn"><span></span></label>
+<label for="active" class="close"></label>
+
+<div class="wrapper">
+<ul>
+    <li><a href="newindex.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="com.html">Comunidade</a></li>
+    <li><a href="pontos.html">CarboPontos</a></li>
+    <li><a href="contatohome.html">Contato</a></li>
+</ul>
+  </div>
+
+  <div id="modal-promocao" class="modal-container">
+    <div class="modal">
+        <button class="fechar">x</button>
+        <h3 class="titulo-modal"></h3>
+        <p class="texto-modal"></p>
+
+    </div>
+</div>
+
+<script>
+    const itens = document.querySelectorAll(".item");
+    const modal = document.querySelector("#modal-promocao");
+    const divfoliculite = modal.firstElementChild;
+    divfoliculite.firstElementChild.addEventListener("click", () => {
+        modal.classList.toggle("mostrar");
+    });
+
+
+
+
+    itens.forEach((item) => {
+        item.addEventListener("click", () => {
+            if(item.classList.contains("foliculite")){
+                document.querySelector('.titulo-modal').innerText = 'Foliculite';
+                document.querySelector('.texto-modal').innerText = 'Evitar roupas apertadas, Manter a pele limpa e seca, Invista na esfoliação, Evite espremer as espinhas.';
+            } else if(item.classList.contains("celulite")){
+                document.querySelector('.titulo-modal').innerText = 'Celulite';
+                document.querySelector('.texto-modal').innerText = 'Hábitos saudáveis, Exercícios físicos, Boa alimentação, Tratamento estéticos.';
+            }
+            modal.classList.toggle("mostrar");
+        });
+    })
+</script>
