@@ -40,8 +40,8 @@
 
 <div class="button-wrapper">
 
-    <button class="botao1">O Que São</button>
-    <button class="botao2">Como Obter</button>
+    <button class="botao1">O Que São?</button>
+    <button class="botao2">Como Obter?</button>
 
     
 
@@ -51,7 +51,7 @@
 </body>
 
 <script>
-    const itens = document.querySelectorAll(".item");
+    const itens = document.querySelectorAll(".botao");
     const modal = document.querySelector("#modal-promocao");
     const divfoliculite = modal.firstElementChild;
     divfoliculite.firstElementChild.addEventListener("click", () => {
@@ -63,12 +63,12 @@
 
     itens.forEach((item) => {
         item.addEventListener("click", () => {
-            if(item.classList.contains("")){
-                document.querySelector('.titulo-modal').innerText = 'Foliculite';
-                document.querySelector('.texto-modal').innerText = 'Evitar roupas apertadas, Manter a pele limpa e seca, Invista na esfoliação, Evite espremer as espinhas.';
-            } else if(item.classList.contains("celulite")){
-                document.querySelector('.titulo-modal').innerText = 'Celulite';
-                document.querySelector('.texto-modal').innerText = 'Hábitos saudáveis, Exercícios físicos, Boa alimentação, Tratamento estéticos.';
+            if(item.classList.contains("botao1")){
+                document.querySelector('.titulo-modal').innerText = 'O Que São?';
+                document.querySelector('.texto-modal').innerText = 'Os CarboPontos são os pontos que os usuarios do CarboBalance ganham durante suas atividades, eles servem para serem trocados por varios beneficios disponiveis em nossa loja.';
+            } else if(item.classList.contains("botao2")){
+                document.querySelector('.titulo-modal').innerText = 'Como Obter CarboPontos?';
+                document.querySelector('.texto-modal').innerText = 'Os CarboPontos são obtidos durante as atividades feitas usando nosso sistema, pode ser um trajeto em uma bicicleta, uma caminhada, um circuito feito ou obtidos em eventos que são disponibilizados no nosso site. (As atividades descritas abaixo tem um multiplicador de 2x quando feitas em grupos).';
             }
             modal.classList.toggle("mostrar");
         });
