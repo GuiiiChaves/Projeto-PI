@@ -40,8 +40,8 @@
 
 <div class="button-wrapper">
 
-    <button class="botao1">O Que São?</button>
-    <button class="botao2">Como Obter?</button>
+    <button class="botao primeiro">O Que São?</button>
+    <button class="botao segundo">Como Obter?</button>
 
     
 
@@ -63,10 +63,10 @@
 
     itens.forEach((item) => {
         item.addEventListener("click", () => {
-            if(item.classList.contains("botao1")){
+            if(item.classList.contains("primeiro")){
                 document.querySelector('.titulo-modal').innerText = 'O Que São?';
-                document.querySelector('.texto-modal').innerText = 'Os CarboPontos são os pontos que os usuarios do CarboBalance ganham durante suas atividades, eles servem para serem trocados por varios beneficios disponiveis em nossa loja.';
-            } else if(item.classList.contains("botao2")){
+                document.querySelector('.texto-modal').innerText = 'Os CarboPontos são o sistema de "moeda" do nosso software, são os pontos que os usuarios do CarboBalance ganham durante suas atividades, eles servem para serem trocados por varios beneficios disponiveis em nossa loja.';
+            } else if(item.classList.contains("segundo")){
                 document.querySelector('.titulo-modal').innerText = 'Como Obter CarboPontos?';
                 document.querySelector('.texto-modal').innerText = 'Os CarboPontos são obtidos durante as atividades feitas usando nosso sistema, pode ser um trajeto em uma bicicleta, uma caminhada, um circuito feito ou obtidos em eventos que são disponibilizados no nosso site. (As atividades descritas abaixo tem um multiplicador de 2x quando feitas em grupos).';
             }
