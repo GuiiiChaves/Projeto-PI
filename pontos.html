@@ -40,8 +40,8 @@
 
 <div class="button-wrapper">
 
-    <a href="#" class="botao">O Que São</a>
-    <a href="#" class="botao">Como Obter</a>
+    <a href="#" class="botao1">O Que São</a>
+    <a href="#" class="botao2">Como Obter</a>
     
 
 </div>
@@ -62,7 +62,7 @@
 
     itens.forEach((item) => {
         item.addEventListener("click", () => {
-            if(item.classList.contains("foliculite")){
+            if(item.classList.contains("")){
                 document.querySelector('.titulo-modal').innerText = 'Foliculite';
                 document.querySelector('.texto-modal').innerText = 'Evitar roupas apertadas, Manter a pele limpa e seca, Invista na esfoliação, Evite espremer as espinhas.';
             } else if(item.classList.contains("celulite")){
