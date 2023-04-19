@@ -5,6 +5,7 @@
 }
 body{
     background-color: rgb(85, 70, 70);
+    user-select: none;
 }
 .cabeca{
     width: 90%;
