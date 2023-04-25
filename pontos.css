@@ -2,6 +2,8 @@ body{
     background-image: url("https://cdn.pixabay.com/photo/2014/05/10/18/10/saturn-341379_960_720.jpg");
     background-repeat: no-repeat;
     user-select: none;
+    background-size:cover;
+    background-attachment:fixed;
 }
 
 h1{
