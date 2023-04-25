@@ -36,18 +36,17 @@ body{
 }
 
 .botao {
-    float: center ;
+   float: center ;
     padding: 8px 15px;
-    margin: 385px 250px 0px;
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    border: 2px solid #78788c;
-    border-radius: 30px;
-    background: 0;
-    color: black;
-    background-color: white;
-    font-weight: 300;
+    margin: 385px 240px 0px;
+    text-decoration: none;
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    background-color: black;
+    font-weight: bold;
   }
   
 .botao:hover {
