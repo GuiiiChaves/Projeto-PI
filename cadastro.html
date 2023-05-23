@@ -9,34 +9,58 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <form class="form">
+    <form class="form" id="cadastroForm">
         <h2>Cadastre-se</h2>
-        <p type="Email:"><input placeholder="Digite seu Email:"></input></p>
-        <p type="Senha:"><input placeholder="Digite sua Senha:"></input></p>
-        <button class="botao"> <a href="login.html"> Cadastrar </a></button>
-        
-      </form>
+        <p type="Email:"><input id="emailInput" placeholder="Digite seu Email:"></input></p>
+        <p type="Senha:"><input id="senhaInput" placeholder="Digite sua Senha:"></input></p>
+        <button class="botao" type="submit">Cadastrar</button>
+    </form>
 
-      
 <!--Menu -->
 <input type="checkbox" id="active">
 <label for="active" class="menu-btn"><span></span></label>
 <label for="active" class="close"></label>
 
 <div class="wrapper">
-<ul>
-  <li><a href="newindex.html">Início</a></li>
-  <li><a href="sobre.html">Sobre</a></li>
-  <li><a href="com.html">Comunidade</a></li>
-  <li><a href="pontos.html">CarboPontos</a></li>
-  <li><a href="contatohome.html">Contato</a></li>
-</ul>
-  </div>
+    <ul>
+        <li><a href="newindex.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="com.html">Comunidade</a></li>
+        <li><a href="pontos.html">CarboPontos</a></li>
+        <li><a href="contatohome.html">Contato</a></li>
+    </ul>
+</div>
+
+<script>
+    document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Impede o envio do formulário
+        
+        // Obter os valores dos campos de entrada
+        var email = document.getElementById("emailInput").value;
+        var senha = document.getElementById("senhaInput").value;
+        
+        // Validação básica
+        if (email && senha) {
+            // Armazenar os dados no localStorage (ou enviar para um servidor)
+            var usuario = {
+                email: email,
+                senha: senha
+            };
+            
+            var usuarios = localStorage.getItem("usuarios");
+            var listaUsuarios = usuarios ? JSON.parse(usuarios) : [];
+            listaUsuarios.push(usuario);
+            
+            localStorage.setItem("usuarios", JSON.stringify(listaUsuarios));
+            
+            // Redirecionar para a página de login
+            window.location.href = "login.html";
+        } else {
+            alert("Por favor, preencha todos os campos.");
+        }
+    });
+</script>
 
 </body>
-<script 
-
-src="https://kit.fontawesome.com/a076d05399.js">
-
-</script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </html>
