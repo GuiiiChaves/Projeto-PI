@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/touchskinicon.ico" type="image/x-icon">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">  
+    <link rel="stylesheet" href="menu.css">
+
+</head>
+<body>
+    <header>
+        <div class="points" id="points">100 Pontos</div>
+    </header>
+
+    <!--Menu -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+
+    <div class="wrapper">
+        <ul>
+            <li><a href="home.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="com.html">Comunidade</a></li>
+            <li><a href="pontos.html">CarboPontos</a></li>
+            <li><a href="contatohome.html">Contato</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+    </div>
+
+    <section>
+        <div class="shopn">
+            <h1>Produtos</h1>
+        </div>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="column">
+                <div class="card" onclick="redeemPoints(2)">
+                    <div class="img-container">
+                        <img src="imagem/mountains-1412683.png" />
+                    </div>
+                    <h3>Doação</h3>
+                    <h3>2 Pontos</h3>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="column">
+                <div class="card" onclick="redeemPoints(10 )">
+                    <div class="img-container">
+                        <img src="imagem/Bike.jpg" />
+                    </div>
+                    <h3>Alugar Bike </h3>
+                    <h3>10 Pontos</h3>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="column">
+                <div class="card" onclick="redeemPoints(25)">
+                    <div class="img-container">
+                        <img src="imagem/Ecobag.jpg" />
+                    </div>
+                    <h3>Ecobag</h3>
+                    <h3>25 Pontos</h3>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="column">
+                <div class="card" onclick="redeemPoints(25)">
+                    <div class="img-container">
+                        <img src="imagem/Garrafa.jpg" />
+                    </div>
+                    <h3>Garrafa de Água</h3>
+                    <h3>25 Pontos</h3>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="column">
+                <div class="card" onclick="redeemPoints(50)">
+                    <div class="img-container">
+                        <img src="imagem/Giftcard.png" />
+                    </div>
+                    <h3>Giftcard 25%OFF</h3>
+                    <h3>50 Pontos</h3>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="column">
+                <div class="card" onclick="redeemPoints(100)">
+                    <div class="img-container">
+                        <img src="imagem/SmartBand.jpg" />
+                    </div>
+                    <h3>SmartBand</h3>
+                    <h3>100 Pontos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var points = 100;
+
+        function redeemPoints(value) {
+            if (points >= value) {
+                points -= value;
+                document.getElementById('points').textContent = points + ' Pontos';
+            } else {
+                alert('Você não tem pontos suficientes para resgatar este produto.');
+            }
+        }
+
+        window.addEventListener("scroll", function() {
+            var pointsDiv = document.getElementById("points");
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+          
+            // Verifica se o topo da janela alcançou o início da div dos pontos
+            if (scrollTop > pointsDiv.offsetTop) {
+                pointsDiv.style.marginTop = "0px";
+            } else {
+                pointsDiv.style.marginTop = (pointsDiv.offsetTop - scrollTop) + "px";
+            }
+        });
+    </script>
+</body>
+</html>
